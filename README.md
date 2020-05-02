@@ -18,5 +18,5 @@ Use flag `--net=container:kerio-container` for the containers where you want to 
 ```bash
 sudo docker run --name kerio -h kerio -d\
 --net=host --cap-add=NET_ADMIN --device /dev/net/tun \
-kerio-vpn-client start "server.domain.com" "username" "password"
+albus/kerio-vpn-client start "server.domain.com" "username" "password"
 ```
