@@ -15,7 +15,6 @@ You can use flag `--net=host`
 Use flag `--net=container:kerio-container` for the containers where you want to use the connection.
 
 ## Examples of configuration
-This will mount all points to ${PWD}/mountpoint.
-It is important to use the propagation flag shared.
-
-    sudo docker run -it -v ${PWD}/mountpoint:/mnt:shared -d kerio-vpn-client start "server.domain.com" "username" "password"
+```bash
+sudo docker run -it -v ${PWD}/mountpoint:/mnt:shared -d kerio-vpn-client start "server.domain.com" "username" "password"
+```
