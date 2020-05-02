@@ -16,5 +16,7 @@ Use flag `--net=container:kerio-container` for the containers where you want to 
 
 ## Examples of configuration
 ```bash
-sudo docker run -it -v ${PWD}/mountpoint:/mnt:shared -d kerio-vpn-client start "server.domain.com" "username" "password"
+sudo docker run --name kerio -h kerio -d\
+--net=host --cap-add=NET_ADMIN --device /dev/net/tun \
+kerio-vpn-client start "server.domain.com" "username" "password"
 ```
